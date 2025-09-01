@@ -1,87 +1,19 @@
-import java.util.Scanner;
-public class Funcionario {
-    String nome;
-    String endereco;
-    int cpf;
-    int telefone;
-    String cargo;
-    int dataAdimissao;
-    int dataDeDemissao;
-    String email;
-    char sexo;
-    String nivelDeEscolaridade;
+package polimorfismo;
 
-    public String getNome() {
-        return nome;
-    }
+public abstract class Funcionario {
+    protected long id;
+    protected String nome;
+    protected String telefone;
+    protected int matricula;
+    protected String endereco;
 
-    public void setNome(String nome) {
+    public Funcionario(long id, String nome, String telefone, int matricula, String endereco) {
+        this.id = id;
         this.nome = nome;
-    }
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String nome) {
+        this.telefone = telefone;
+        this.matricula = matricula;
         this.endereco = endereco;
     }
 
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
-    public int getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-    public int getDataAdimissao() {
-        return dataAdimissao;
-    }
-
-    public void setDataAdimissao(int dataAdimissao) {
-        this.dataAdimissao = dataAdimissao;
-    }
-    public int getDataDeDemissao() {
-        return dataDeDemissao;
-    }
-
-    public void setDataDeDemissao(int dataDeDemissao) {
-        this.dataDeDemissao = dataDeDemissao;
-    }
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public char getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-    public String getNivelDeEscolaridade() {
-        return nivelDeEscolaridade;
-    }
-
-    public void setNivelDeEscolaridade(String nivelDeEscolaridade) {
-        this.nivelDeEscolaridade = nivelDeEscolaridade;
-    }
-
+    public abstract void calculaSalario();
 }
